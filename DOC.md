@@ -46,13 +46,12 @@ Tambahan :
 ## Looping Array
 Sebagai contoh looping di `src/components/Helloworld.vue`.
 - Pertama masukkan array yang akan di looping pada script -> data. Misal kita akan memasukkan data `users`.
-```
+```html
 <script>
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       users: [
         {firstname: 'Sebastian', lastname: 'Eschweiler'},
         {firstname: 'Bill', lastname: 'Smith'},
@@ -64,7 +63,7 @@ export default {
 </script>
 ```
 - Gunakan `v-for` pada html untuk melooping array.
-```
+```html
 <div>
     <ul>
     <li v-for="user in users">
@@ -72,4 +71,44 @@ export default {
     </li>
     </ul>
 </div>
+```
+
+## Binding Value
+- Script
+``` html
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      input_val: 'anjay'
+    }
+  }
+}
+</script>
+```
+- Template
+```html
+<div>
+    <input type="text" v-model="input_val">
+</div>
+```
+
+## Print Value
+- Script
+``` html
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      input_val: 'anjay'
+    }
+  }
+}
+</script>
+```
+- Template
+```html
+Input Value: <span v-text="input_val"></span>
 ```

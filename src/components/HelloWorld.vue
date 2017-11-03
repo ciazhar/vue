@@ -24,6 +24,10 @@
         </li>
       </ul>
     </div>
+    <div>
+      <input type="text" v-model="input_val"><br>
+      Input Value: <span v-text="input_val"></span>
+    </div>
   </div>
 </template>
 
@@ -37,7 +41,8 @@ export default {
         {firstname: 'Sebastian', lastname: 'Eschweiler'},
         {firstname: 'Bill', lastname: 'Smith'},
         {firstname: 'John', lastname: 'Porter'}
-      ]
+      ],
+      input_val: 'anjay'
     }
   }
 }
