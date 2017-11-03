@@ -112,3 +112,31 @@ export default {
 ```html
 Input Value: <span v-text="input_val"></span>
 ```
+
+## V-on
+- Templates
+```html
+<div>
+    <button class="btn btn-primary" v-on:click="counter++">You've clicked this button {{counter}} times!</button>
+</div>
+```
+- Script
+``` html
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      users: [
+        {firstname: 'Sebastian', lastname: 'Eschweiler'},
+        {firstname: 'Bill', lastname: 'Smith'},
+        {firstname: 'John', lastname: 'Porter'}
+      ],
+      input_val: 'anjay',
+      counter: 0
+    }
+  }
+}
+</script>
+```

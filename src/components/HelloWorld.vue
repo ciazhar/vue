@@ -28,6 +28,9 @@
       <input type="text" v-model="input_val"><br>
       Input Value: <span v-text="input_val"></span>
     </div>
+    <div>
+      <button class="btn btn-primary" v-on:click="counter++">You've clicked this button {{counter}} times!</button>
+    </div>
   </div>
 </template>
 
@@ -42,7 +45,8 @@ export default {
         {firstname: 'Bill', lastname: 'Smith'},
         {firstname: 'John', lastname: 'Porter'}
       ],
-      input_val: 'anjay'
+      input_val: 'anjay',
+      counter: 0
     }
   }
 }
