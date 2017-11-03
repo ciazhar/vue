@@ -42,3 +42,34 @@ Keterangan :
 
 Tambahan : 
 - Dalam 1 project vue dapat memiliki lebih dari 1 buah top level component. Misal App.vue sebagai tempat content, lalu ada lagi Header.vue untuk header, Sidebar.vue untuk sidebar.
+
+## Looping Array
+Sebagai contoh looping di `src/components/Helloworld.vue`.
+- Pertama masukkan array yang akan di looping pada script -> data. Misal kita akan memasukkan data `users`.
+```
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      users: [
+        {firstname: 'Sebastian', lastname: 'Eschweiler'},
+        {firstname: 'Bill', lastname: 'Smith'},
+        {firstname: 'John', lastname: 'Porter'}
+      ]
+    }
+  }
+}
+</script>
+```
+- Gunakan `v-for` pada html untuk melooping array.
+```
+<div>
+    <ul>
+    <li v-for="user in users">
+        {{user.firstname}} {{user.lastname}}
+    </li>
+    </ul>
+</div>
+```

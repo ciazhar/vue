@@ -17,7 +17,13 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    
+    <div>
+      <ul>
+        <li v-for="user in users">
+          {{user.firstname}} {{user.lastname}}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -26,7 +32,12 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      users: [
+        {firstname: 'Sebastian', lastname: 'Eschweiler'},
+        {firstname: 'Bill', lastname: 'Smith'},
+        {firstname: 'John', lastname: 'Porter'}
+      ]
     }
   }
 }
